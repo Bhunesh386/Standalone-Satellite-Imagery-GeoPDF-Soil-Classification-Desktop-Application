@@ -1,0 +1,1 @@
+# Standalone-Satellite-Imagery-GeoPDF-Soil-Classification-Desktop-Application
