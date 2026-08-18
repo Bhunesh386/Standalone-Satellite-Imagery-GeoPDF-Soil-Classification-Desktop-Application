@@ -1,0 +1,76 @@
+{
+  "classes": [
+    {
+      "id": 0,
+      "name": "NoData / Masked",
+      "short_name": "NoData",
+      "color_rgb": [0, 0, 0],
+      "color_rgba": [0, 0, 0, 0],
+      "hex": "#000000",
+      "description": "Unclassified, masked furniture, neatlines, roads, or invalid pixels",
+      "fertility": "N/A",
+      "permeability": "N/A"
+    },
+    {
+      "id": 1,
+      "name": "Alluvial Soil",
+      "short_name": "Alluvial",
+      "color_rgb": [230, 184, 0],
+      "color_rgba": [230, 184, 0, 255],
+      "hex": "#E6B800",
+      "description": "High-fertility transported sediment composed of loam, silt, and fine clay along river basins",
+      "fertility": "Very High",
+      "permeability": "Moderate"
+    },
+    {
+      "id": 2,
+      "name": "Black Soil (Vertisol)",
+      "short_name": "Black / Vertisol",
+      "color_rgb": [54, 43, 40],
+      "color_rgba": [54, 43, 40, 255],
+      "hex": "#362B28",
+      "description": "Deep black montmorillonite clay soils with high water retention and self-mulching swelling/shrinkage properties",
+      "fertility": "High",
+      "permeability": "Low / Impermeable"
+    },
+    {
+      "id": 3,
+      "name": "Red Soil",
+      "short_name": "Red Soil",
+      "color_rgb": [192, 57, 43],
+      "color_rgba": [192, 57, 43, 255],
+      "hex": "#C0392B",
+      "description": "Porous, friable soil rich in ferric oxides developed over crystalline granite and metamorphic rocks",
+      "fertility": "Medium to Low",
+      "permeability": "High"
+    },
+    {
+      "id": 4,
+      "name": "Lateritic Soil",
+      "short_name": "Lateritic",
+      "color_rgb": [211, 84, 0],
+      "color_rgba": [211, 84, 0, 255],
+      "hex": "#D35400",
+      "description": "Hardened residual tropical soil formed by intensive leaching of silica, rich in hydrated iron and aluminum oxides",
+      "fertility": "Low / Acidic",
+      "permeability": "Moderate to High"
+    },
+    {
+      "id": 5,
+      "name": "Sandy / Desert Soil",
+      "short_name": "Sandy / Desert",
+      "color_rgb": [243, 156, 18],
+      "color_rgba": [243, 156, 18, 255],
+      "hex": "#F39C12",
+      "description": "Coarse, unaggregated quartz sand with minimal organic matter and high evaporation rates",
+      "fertility": "Very Low",
+      "permeability": "Very High"
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "standard": "USDA / FAO Soil Classification Cross-Mapping",
+    "num_classes": 6,
+    "nodata_id": 0
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "audit_metadata": {
+    "timestamp": "2026-08-19T00:01:40.084921",
+    "software": "Standalone Satellite-Imagery & GeoPDF Soil Classifier",
+    "version": "1.0.0",
+    "offline_mode": true
+  },
+  "input_dataset": {
+    "source_file": "/home/bhunesh/.gemini/antigravity/worktrees/Standalone-Satellite-Imagery-GeoPDF-Soil-Classification-Desktop-Application/build_geospatial_soil_classifier/samples/sample_geotiff.tif",
+    "filename": "sample_geotiff.tif",
+    "format": "GEOTIFF",
+    "source_crs": "EPSG:32643",
+    "dimensions_pixels": {
+      "width": 256,
+      "height": 256
+    },
+    "total_scene_pixels": 65536
+  },
+  "processing_configuration": {
+    "target_crs": "EPSG:32643",
+    "ground_resolution_m_per_pixel": 10.0,
+    "pixel_area_m2": 100.0,
+    "total_scene_area_km2": 6.5536,
+    "classified_land_area_km2": 5.4505
+  },
+  "confidence_assessment": {
+    "mean_confidence": 0.7248,
+    "median_confidence": 0.7254,
+    "percentile_10": 0.5455,
+    "percentile_90": 0.9036,
+    "low_confidence_pixels": 0,
+    "low_confidence_percentage": 0.0
+  },
+  "soil_class_distribution": [
+    {
+      "class_id": 0,
+      "class_name": "NoData / Masked",
+      "hex": "#000000",
+      "pixel_count": 11031,
+      "percentage_of_scene": 16.83,
+      "area_sq_meters": 1103100.0,
+      "area_hectares": 110.31,
+      "area_sq_km": 1.1031,
+      "description": "Unclassified, masked furniture, neatlines, roads, or invalid pixels",
+      "fertility": "N/A",
+      "permeability": "N/A",
+      "percentage_of_classified_land": 0.0
+    },
+    {
+      "class_id": 1,
+      "class_name": "Alluvial Soil",
+      "hex": "#E6B800",
+      "pixel_count": 10901,
+      "percentage_of_scene": 16.63,
+      "area_sq_meters": 1090100.0,
+      "area_hectares": 109.01,
+      "area_sq_km": 1.0901,
+      "description": "High-fertility transported sediment composed of loam, silt, and fine clay along river basins",
+      "fertility": "Very High",
+      "permeability": "Moderate",
+      "percentage_of_classified_land": 20.0
+    },
+    {
+      "class_id": 2,
+      "class_name": "Black Soil (Vertisol)",
+      "hex": "#362B28",
+      "pixel_count": 10859,
+      "percentage_of_scene": 16.57,
+      "area_sq_meters": 1085900.0,
+      "area_hectares": 108.59,
+      "area_sq_km": 1.0859,
+      "description": "Deep black montmorillonite clay soils with high water retention and self-mulching swelling/shrinkage properties",
+      "fertility": "High",
+      "permeability": "Low / Impermeable",
+      "percentage_of_classified_land": 19.92
+    },
+    {
+      "class_id": 3,
+      "class_name": "Red Soil",
+      "hex": "#C0392B",
+      "pixel_count": 10907,
+      "percentage_of_scene": 16.64,
+      "area_sq_meters": 1090700.0,
+      "area_hectares": 109.07,
+      "area_sq_km": 1.0907,
+      "description": "Porous, friable soil rich in ferric oxides developed over crystalline granite and metamorphic rocks",
+      "fertility": "Medium to Low",
+      "permeability": "High",
+      "percentage_of_classified_land": 20.01
+    },
+    {
+      "class_id": 4,
+      "class_name": "Lateritic Soil",
+      "hex": "#D35400",
+      "pixel_count": 10771,
+      "percentage_of_scene": 16.44,
+      "area_sq_meters": 1077100.0,
+      "area_hectares": 107.71,
+      "area_sq_km": 1.0771,
+      "description": "Hardened residual tropical soil formed by intensive leaching of silica, rich in hydrated iron and aluminum oxides",
+      "fertility": "Low / Acidic",
+      "permeability": "Moderate to High",
+      "percentage_of_classified_land": 19.76
+    },
+    {
+      "class_id": 5,
+      "class_name": "Sandy / Desert Soil",
+      "hex": "#F39C12",
+      "pixel_count": 11067,
+      "percentage_of_scene": 16.89,
+      "area_sq_meters": 1106700.0,
+      "area_hectares": 110.67,
+      "area_sq_km": 1.1067,
+      "description": "Coarse, unaggregated quartz sand with minimal organic matter and high evaporation rates",
+      "fertility": "Very Low",
+      "permeability": "Very High",
+      "percentage_of_classified_land": 20.3
+    }
+  ],
+  "performance_metrics": {
+    "test": true
+  }
+}
