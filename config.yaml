@@ -1,0 +1,65 @@
+app:
+  name: "Standalone Satellite-Imagery & GeoPDF Soil Classifier"
+  version: "1.0.0"
+  organization: "Geospatial ML Analytics"
+  theme: "dark"
+
+grid:
+  default_target_crs: "EPSG:32643" # Default UTM zone 43N
+  auto_utm: true
+  target_resolution_m: 10.0       # 10m per pixel
+  tile_size: 512                  # 512x512 tile window
+  tile_overlap: 32                # 32px overlap for boundary blending
+  blend_method: "cosine"          # cosine, linear, or gaussian
+  default_pdf_dpi: 300            # Rendering DPI for GeoPDF raster extraction
+
+model:
+  architecture: "DualHeadUNet"
+  num_classes: 6
+  in_channels: 4                  # Default 4 channels (RGB + NIR), adaptable to 3 (RGB)
+  encoder_channels: [32, 64, 128, 256]
+  weights_path: "models/weights.pt"
+  batch_size: 4
+  device: "auto"                  # auto, cpu, cuda
+  confidence_threshold: 0.40
+
+classes:
+  0:
+    name: "NoData / Masked"
+    color: [0, 0, 0, 0]           # RGBA
+    hex: "#000000"
+    description: "Unclassified, masked furniture, roads, or NoData regions"
+  1:
+    name: "Alluvial Soil"
+    color: [230, 184, 0, 255]
+    hex: "#E6B800"
+    description: "Fertile river valley silt and clay sediments"
+  2:
+    name: "Black Soil (Vertisol)"
+    color: [54, 43, 40, 255]
+    hex: "#362B28"
+    description: "Deep moisture-retentive montmorillonite clay (Chernozem/Vertisol)"
+  3:
+    name: "Red Soil"
+    color: [192, 57, 43, 255]
+    hex: "#C0392B"
+    description: "Iron-oxide rich crystalline metamorphic soil"
+  4:
+    name: "Lateritic Soil"
+    color: [211, 84, 0, 255]
+    hex: "#D35400"
+    description: "Aluminosilicate leached residual tropical soil"
+  5:
+    name: "Sandy / Desert Soil"
+    color: [243, 156, 18, 255]
+    hex: "#F39C12"
+    description: "Arid, porous, high-permeability coarse sand"
+
+export:
+  geotiff: true
+  geopdf: true
+  confidence_map: true
+  report_json: true
+  preview_png: true
+  legend_json: true
+  compression: "DEFLATE"
